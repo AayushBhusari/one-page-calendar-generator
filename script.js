@@ -122,13 +122,13 @@ function downloadCalendar() {
     allowTaint: true,
   })
     .then(function (canvas) {
-      const imgData = canvas.toDataURL("image/jpg");
+      const imgData = canvas.toDataURL("image/png");
 
       const link = document.createElement("a");
       link.href = imgData;
       link.download = `${
         document.getElementById("yearDisplayer").innerText
-      }-OPCalendar.jpg`;
+      }-OPCalendar.png`;
       link.click();
       alert("Download Successful!");
     })

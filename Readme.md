@@ -11,7 +11,7 @@ The **One Page Calendar** project is designed to provide a comprehensive calenda
 ## Example
 
 One Page Calendar 2025
-![One Page Calendar 2025](https://ibb.co/jLLNBYD)
+![One Page Calendar 2025](/2025-OPC.png)
 
 ## Project Overview
 

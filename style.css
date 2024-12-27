@@ -1,0 +1,120 @@
+/* General styling for the page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: fit-content;
+  margin: 30px auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+.calender {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+#calendar-holder {
+  display: none;
+}
+
+.calender th,
+.calender td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.calender th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.calender td {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.calender td:nth-child(odd) {
+  background-color: #eaf3ff;
+}
+
+.calender td:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#months-th {
+  background-color: #0056b3;
+}
+
+.calender tr:nth-child(odd) {
+  background-color: #f1f8ff;
+}
+
+.calender td.Sunday {
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .calender th,
+  .calender td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

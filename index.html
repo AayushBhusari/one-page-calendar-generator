@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Page Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>One Page Calendar Generator</h1>
+      <input type="number" id="year" placeholder="Enter Year" />
+      <button id="generate-btn">Generate Calendar</button>
+      <div id="calendar-holder">
+        <table class="calender" border="1">
+          <tr>
+            <th rowspan="2" colspan="5">Dates</th>
+            <th id="months-th">Months</th>
+          </tr>
+          <tr id="month-tr"></tr>
+          <tr id="first-line"></tr>
+          <tr id="second-line"></tr>
+          <tr id="third-line"></tr>
+          <tr id="fourth-line"></tr>
+          <tr id="fifth-line"></tr>
+          <tr id="sixth-line"></tr>
+          <tr id="seventh-line"></tr>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

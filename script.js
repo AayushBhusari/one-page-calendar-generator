@@ -126,11 +126,14 @@ function downloadCalendar() {
 
       const link = document.createElement("a");
       link.href = imgData;
-      link.download = "calendar.jpg";
+      link.download = `${
+        document.getElementById("yearDisplayer").innerText
+      }-OPCalendar.jpg`;
       link.click();
+      alert("Download Successful!");
     })
     .catch(function (error) {
-      console.error("Error capturing the calendar:", error);
+      alert("Error downloading:", error);
     });
 }
 

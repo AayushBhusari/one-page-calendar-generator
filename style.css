@@ -9,12 +9,16 @@ body {
 
 .container {
   max-width: fit-content;
-  margin: 30px auto;
   text-align: center;
+  margin: 30px auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cal-hol {
+  text-align: center;
 }
 
 h1 {
@@ -55,8 +59,14 @@ button:hover {
   font-size: 14px;
 }
 
-#calendar-holder {
+.disp-block-later,
+.disp-flex-later {
   display: none;
+}
+
+.disp-flex-later {
+  justify-content: center;
+  align-items: center;
 }
 
 .calender th,

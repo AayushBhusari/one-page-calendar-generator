@@ -13,8 +13,18 @@ function getDayOfWeek(dateString) {
 }
 
 function generateCalendar() {
-  document.getElementById("calendar-holder").style.display = "block";
-  let year = document.getElementById("year").value;
+  //disp-clock-later
+  let toDispBlockElemsArr = Array.from(
+    document.getElementsByClassName("disp-block-later")
+  );
+  toDispBlockElemsArr.forEach((elem) => (elem.style.display = "block"));
+  //disp-flex-later
+  let toDispFlexShowElemsArr = Array.from(
+    document.getElementsByClassName("disp-flex-later")
+  );
+  toDispFlexShowElemsArr.forEach((elem) => (elem.style.display = "flex"));
+  let yearElem = document.getElementById("year");
+  let year = yearElem.value;
   if (!year || year < 1) {
     alert("Please enter a valid year!");
     return;
@@ -99,6 +109,29 @@ function generateCalendar() {
       row.innerHTML += `<td class="${daysOfWeek[dayIndex]}">${daysOfWeek[dayIndex]}</td>`;
     });
   });
+  document.getElementById("yearDisplayer").innerHTML = year;
+  yearElem.value = "";
+  console.log(html2canvas);
+}
+
+//Download function
+function downloadCalendar() {
+  const calendarElement = document.getElementById("calendar-div");
+
+  html2canvas(calendarElement, {
+    allowTaint: true,
+  })
+    .then(function (canvas) {
+      const imgData = canvas.toDataURL("image/jpg");
+
+      const link = document.createElement("a");
+      link.href = imgData;
+      link.download = "calendar.jpg";
+      link.click();
+    })
+    .catch(function (error) {
+      console.error("Error capturing the calendar:", error);
+    });
 }
 
 document.getElementById("year").addEventListener("keydown", function (event) {
@@ -110,3 +143,7 @@ document.getElementById("year").addEventListener("keydown", function (event) {
 document
   .getElementById("generate-btn")
   .addEventListener("click", generateCalendar);
+
+document
+  .getElementById("download-btn")
+  .addEventListener("click", downloadCalendar);

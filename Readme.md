@@ -46,7 +46,7 @@ Ensure you have a web browser to run the project. This project works with most m
 1. Clone or download this repository.
 
    ```bash
-   git clone https://github.com/your-username/one-page-calendar.git
+   git clone https://github.com/AayushBhusari/one-page-calendar.git
    ```
 
 2. Open the `index.html` file in a web browser.
